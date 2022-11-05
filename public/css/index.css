@@ -1,0 +1,564 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+}
+
+* button {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b;
+}
+
+body:after {
+    background-image: url("https://files.facepunch.com/garry/1b1011b1/test.png?1=");
+    content: " ";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 500;
+    pointer-events: none;
+    opacity: .6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+}
+
+section {
+    width: 100%;
+}
+
+section .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 1em;
+}
+
+@-webkit-keyframes animation {
+    0% {
+        background-image: url("../assets/images/slides/background1.png");
+    }
+    45% {
+        background-image: url("../assets/images/slides/background2.png");
+    }
+    75% {
+        background-image: url("../assets/images/slides/background3.png");
+    }
+    100% {
+        background-image: url("../assets/images/slides/background1.png");
+    }
+}
+
+@keyframes animation {
+    0% {
+        background-image: url("../assets/images/slides/background1.png");
+    }
+    45% {
+        background-image: url("../assets/images/slides/background2.png");
+    }
+    75% {
+        background-image: url("../assets/images/slides/background3.png");
+    }
+    100% {
+        background-image: url("../assets/images/slides/background1.png");
+    }
+}
+
+.header {
+    height: 100vh;
+    -webkit-animation: animation 10s ease infinite;
+    animation: animation 10s ease infinite;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header .nav .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.header .nav .container img {
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.header .nav .container img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.header .nav .container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.header .nav .container ul a {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    color: #e4dad1;
+    padding: 8px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 1.25rem;
+    margin: 0px 10px;
+}
+
+.header .nav .container ul .btn {
+    background-color: #cd412b;
+    padding: 8px 12px;
+}
+
+.header .nav .container ul a:hover {
+    color: #fff;
+}
+
+.header .nav .container form button {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    color: #e4dad1;
+    padding: 8px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 1.25rem;
+    margin: 0px 10px;
+    background-color: #cd412b;
+    padding: 8px 12px;
+    border: none;
+}
+
+.header .header-container {
+    height: 85vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0em;
+}
+
+.header .header-container .box {
+    text-align: left;
+}
+
+.header .header-container .box h1 {
+    font-size: 12rem;
+    line-height: 12rem;
+    word-spacing: 100vw;
+    color: #e4dad1;
+    font-weight: 500;
+}
+
+.header .header-container .box p {
+    margin-bottom: 2rem;
+    line-height: 1.7rem;
+    color: #e4dad1;
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+}
+
+.header .header-container .box ul a {
+    display: inline-block;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    color: #e4dad1;
+    padding: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 1.45rem;
+    background-color: #cd412b;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+
+.header .header-container .box ul a:hover {
+    color: #fff;
+}
+
+.header .header-container .box ul .btn {
+    background-color: #1b1b1b;
+    padding: 10px 30px;
+    border-radius: 3px;
+}
+
+.timer {
+    background-color: #252525;
+}
+
+.timer .container {
+    text-align: center;
+    padding: 90px 1em;
+}
+
+.timer .container h1 {
+    color: #fff;
+    background-color: #444444;
+    padding: 12px 50px;
+    font-weight: 500;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.timer .container h3 {
+    font-family: 'Bebas Neue', cursive;
+    color: #cd412b;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.timer .container h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #e4dad1;
+}
+
+.timer .container h2 span {
+    font-family: 'Bebas Neue', cursive;
+    color: #cd412b;
+}
+
+.timer .container p {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #e4dad1;
+}
+
+.timer .container a {
+    padding: 10px 20px;
+    color: #e4dad1;
+    background-color: #cd412b;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3rem;
+    margin: 10px 0px;
+    display: inline-block;
+}
+
+.timer .container a i {
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.about {
+    background-color: #141415;
+}
+
+.about .container {
+    text-align: center;
+    padding: 90px 1em;
+}
+
+.about .container h1 {
+    color: #fff;
+    font-weight: 500;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 2.8rem;
+}
+
+.about .container p {
+    color: #e4dad1;
+    line-height: 2rem;
+    margin-bottom: 20px;
+}
+
+.about .container p a {
+    color: #cd412b;
+    text-decoration: underline;
+}
+
+.about .container .block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: start;
+}
+
+.about .container .block .box {
+    background-color: #252525;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.about .container .block .box h2 {
+    text-transform: capitalize;
+    color: #cd412b;
+    font-size: 2.2rem;
+}
+
+.about .container .block .box p {
+    margin-bottom: 10px;
+}
+
+.about .container .block .box ul {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.about .container .block .box ul li {
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #5d7239;
+    font-weight: 600;
+    color: #e4dad1;
+}
+
+.commands {
+    background-color: #1b1b1b;
+}
+
+.commands .container {
+    text-align: center;
+    padding: 90px 1em;
+}
+
+.commands .container h1 {
+    color: #fff;
+    font-weight: 500;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 2.8rem;
+}
+
+.commands .container p {
+    color: #e4dad1;
+    line-height: 2rem;
+    margin-bottom: 20px;
+}
+
+.commands .container p a {
+    color: #cd412b;
+    text-decoration: underline;
+}
+
+.commands .container .table {
+    background-color: #141313ed;
+    padding: 20px;
+}
+
+.commands .container .table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.commands .container .table table tr th {
+    color: #e4dad1;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    padding: 20px 5px;
+    background-color: #252525;
+    font-size: 1.1rem;
+}
+
+.commands .container .table table tr span {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    padding: 8px 12px;
+}
+
+.commands .container .table table tr .everyone span {
+    background-color: #cd412b;
+}
+
+.commands .container .table table tr .elite span {
+    background-color: #fbc52f;
+    color: #1b1b1b;
+}
+
+.commands .container .table table tr .capital {
+    text-transform: capitalize;
+}
+
+.commands .container .table table tr td {
+    padding: 13px 0px;
+    color: #e4dad1;
+}
+
+.commands .container .table table tr td i {
+    color: #e4dad1;
+    padding: 5px;
+    font-size: 0.6rem;
+}
+
+.commands .container .table table tr td .fa-times {
+    background-color: #cd412b;
+    padding: 5px 6px;
+}
+
+.commands .container .table table tr td .fa-check {
+    background-color: #5d7239;
+}
+
+.commands .container .table table tr .command {
+    color: #cd412b;
+}
+
+.commands .container .table table tr:nth-child(odd) {
+    background-color: #1b1b1b;
+}
+
+.staff {
+    background-image: url("../assets/images/staff-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.staff .overlay {
+    position: absolute;
+    background-color: rgba(20, 20, 21, 0.6);
+    height: 100%;
+    width: 100%;
+}
+
+.staff .container {
+    padding: 100px 1em;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.staff .container .title {
+    color: #fff;
+    background-color: #1b1b1b;
+    padding: 12px 50px;
+    font-weight: 500;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.staff .container .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.staff .container .grid .box {
+    background-color: #1b1b1b;
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.staff .container .grid .box img {
+    width: 100%;
+    position: relative;
+    height: 230px;
+    margin-bottom: 20px;
+}
+
+.staff .container .grid .box .info h2 {
+    color: #cd412b;
+    font-size: 2rem;
+    margin-left: 5px;
+}
+
+.staff .container .grid .box .info ul {
+    list-style: none;
+}
+
+.staff .container .grid .box .info ul li {
+    color: #dfdfdf;
+    margin: 15px 0px;
+    text-transform: capitalize;
+}
+
+.staff .container .grid .box .info ul li i {
+    color: #6b6b6b;
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: #0f0f0f;
+}
+
+.footer .container {
+    text-align: center;
+    padding: 50px 1em;
+}
+
+.footer .container p {
+    font-family: 'Bebas Neue', cursive;
+    color: #e4dad1;
+    font-size: 1.5rem;
+}
+
+.footer .container p a {
+    font-family: 'Bebas Neue', cursive;
+    color: #cd412b;
+    text-decoration: underline;
+}
+
+
+/*# sourceMappingURL=index.css.map */

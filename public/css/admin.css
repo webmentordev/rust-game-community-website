@@ -1,0 +1,604 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    outline: none;
+}
+
+* button {
+    cursor: pointer;
+}
+
+ ::-webkit-scrollbar {
+    width: 12px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #1b1b1b;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #444444;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b;
+}
+
+body:after {
+    background-image: url("https://files.facepunch.com/garry/1b1011b1/test.png?1=");
+    background-attachment: fixed;
+    content: " ";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 500;
+    pointer-events: none;
+    opacity: .6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+}
+
+section {
+    width: 100%;
+}
+
+section .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 1em;
+}
+
+.header {
+    height: 60vh;
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-image: url('../assets/images/admin-back.jpg');
+}
+
+.header .overlay {
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: black;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 212, 255, 0)));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 212, 255, 0) 100%);
+    z-index: -1;
+}
+
+.header .nav {
+    position: relative;
+}
+
+.header .nav .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.header .nav .container img {
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.header .nav .container img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.header .nav .container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.header .nav .container ul a {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    color: #e4dad1;
+    padding: 8px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 1.25rem;
+    margin: 0px 10px;
+}
+
+.header .nav .container ul .btn {
+    background-color: #cd412b;
+    padding: 8px 12px;
+}
+
+.header .nav .container ul a:hover {
+    color: #fff;
+}
+
+.header .nav .container form button {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    color: #e4dad1;
+    padding: 8px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 1.25rem;
+    margin: 0px 10px;
+    background-color: #cd412b;
+    padding: 8px 12px;
+    border: none;
+}
+
+.header .header-container {
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0em;
+}
+
+.header .header-container .box {
+    text-align: center;
+    margin: auto;
+}
+
+.header .header-container .box h1 {
+    font-size: 7rem;
+    line-height: 9rem;
+    color: #e4dad1;
+    font-weight: 500;
+}
+
+.header .header-container .box p {
+    margin-bottom: 2rem;
+    line-height: 1.7rem;
+    color: #e4dad1;
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+}
+
+.content .container {
+    max-width: 1000px;
+    padding: 100px 1em;
+}
+
+.content .container .tabs-content {
+    background-color: #141313ed;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.content .container .tabs-content .opened {
+    background-color: #3b3b3b;
+    margin-top: 20px;
+}
+
+.content .container .tabs-content .expand{
+    width: 100%;
+    text-align: start;
+    color: #e4dad1;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.content .container .tabs-content .expand span{
+    float: right;
+}
+.content .container .tabs-content .expand span i{
+    font-size: 1.2rem;
+}
+
+.content .container .title {
+    font-size: 2.2rem;
+    color: #e4dad1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content .container .pagination p {
+    color: #cd412b;
+}
+
+.content .container .pagination p span {
+    color: #e4dad1;
+}
+
+.content .container .pagination span a {
+    background-color: #5d7239;
+    border: 1px #5d7239 solid;
+    color: #1b1b1b;
+}
+
+.content .container .pagination span a:hover {
+    color: #e4dad1;
+}
+
+.content .container .pagination span .cursor-default {
+    background-color: #35441b;
+    border: 1px #35441b solid;
+    color: #e4dad1;
+}
+
+.content .container form {
+    display: block;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+.content .container form input {
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    background-color: #252525;
+    margin-bottom: 13px;
+    color: #fff;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.content .container form textarea {
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    background-color: #252525;
+    margin-bottom: 13px;
+    color: #fff;
+    outline: none;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+
+.content .container form select {
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    background-color: #252525;
+    margin-bottom: 13px;
+    color: #fff;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.content .container form .success {
+    color: #5d7239;
+    margin: 10px 0px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.content .container form .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.content .container form .flex .side {
+    margin-right: 10px;
+}
+
+.content .container form button {
+    border: none;
+    color: #fff;
+    padding: 8px 20px;
+    background-color: #cd412b;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.content .container table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.content .container table tr th {
+    background-color: #5d7239;
+    color: #e4dad1;
+    padding: 10px;
+}
+
+.content .container table tr td {
+    padding: 13px 10px;
+    text-align: center;
+    color: #e4dad1;
+    font-size: 0.8rem;
+}
+
+.content .container table tr td a {
+    background-color: #5d7239;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 3px 10px;
+}
+
+.content .container table tr td form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.content .container table tr td form button {
+    padding: 2px 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.content .container table tr .cap {
+    text-transform: capitalize;
+}
+
+.content .container table tr:nth-child(odd) {
+    background-color: #252525;
+}
+
+.content .container .tabcontent {
+    background-color: #141313ed;
+    padding: 30px;
+}
+
+.content .container .tabs {
+    margin-bottom: 10px;
+}
+
+.content .container .tabs button {
+    background-color: #141313ed;
+    text-align: start;
+    width: 100%;
+    padding: 20px 12px;
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.4rem;
+    margin-right: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: none;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.content .container .tabs button .active {
+    background-color: #cd412b;
+}
+
+.content .container .tabs button:hover {
+    background-color: #cd412b;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.content .container .tabs .active {
+    background-color: #cd412b;
+}
+
+.content .container .wipetimer .date {
+    color: #e4dad1;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.content .container .wipetimer .date span {
+    color: #cd412b;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.content .container .commands {
+    width: 100%;
+}
+
+.content .container .commands .table {
+    background-color: #141313ed;
+    width: 100%;
+}
+
+.content .container .commands .table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content .container .commands .table table a {
+    font-size: 0.8rem;
+    background-color: transparent;
+    background-color: #5d7239;
+    padding: 8px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.content .container .commands .table table form {
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+}
+
+.content .container .commands .table table form button {
+    font-size: 0.8rem;
+}
+
+.content .container .commands .table table tr th {
+    color: #e4dad1;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    padding: 10px 5px;
+    font-size: 1.1rem;
+    background-color: transparent;
+}
+
+.content .container .commands .table table tr span {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    padding: 8px 12px;
+}
+
+.content .container .commands .table table tr .everyone span {
+    background-color: #cd412b;
+}
+
+.content .container .commands .table table tr .elite span {
+    background-color: #fbc52f;
+    color: #1b1b1b;
+}
+
+.content .container .commands .table table tr .capital {
+    text-transform: capitalize;
+}
+
+.content .container .commands .table table tr td {
+    padding: 13px 0px;
+    color: #e4dad1;
+}
+
+.content .container .commands .table table tr td i {
+    color: #e4dad1;
+    padding: 5px;
+    font-size: 0.6rem;
+}
+
+.content .container .commands .table table tr td .fa-times {
+    background-color: #cd412b;
+    padding: 5px 8px;
+}
+
+.content .container .commands .table table tr td .fa-check {
+    background-color: #5d7239;
+}
+
+.content .container .commands .table table tr .command {
+    color: #cd412b;
+}
+
+.content .container .commands .table table tr:nth-child(odd) {
+    background-color: #1b1b1b;
+}
+
+.content .container .wipe_purge table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.content .container .wipe_purge table form {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.content .container .wipe_purge table form select {
+    margin-bottom: 0px;
+}
+
+.content .container .wipe_purge table tr th {
+    background-color: #5d7239;
+    color: #e4dad1;
+    padding: 10px;
+}
+
+.content .container .wipe_purge table tr td {
+    padding: 13px 10px;
+    text-align: center;
+    color: #e4dad1;
+    font-size: 0.8rem;
+}
+
+.content .container .wipe_purge table tr td i {
+    color: #e4dad1;
+    padding: 5px;
+    font-size: 0.6rem;
+}
+
+.content .container .wipe_purge table tr td .fa-times {
+    background-color: #cd412b;
+    padding: 5px 8px;
+}
+
+.content .container .wipe_purge table tr td .fa-check {
+    background-color: #5d7239;
+}
+
+.content .container .wipe_purge table tr .cap {
+    text-transform: capitalize;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1em;
+}
+
+.content .container .wipe_purge table tr .wiped {
+    background-color: #3b4b20;
+    color: #e4dad1;
+}
+
+.content .container .wipe_purge table tr .active {
+    background-color: #5d7239;
+    color: #e4dad1;
+}
+
+.content .container .wipe_purge table tr:nth-child(odd) {
+    background-color: #252525;
+}
+
+.footer {
+    background-color: #0f0f0f;
+}
+
+.footer .container {
+    text-align: center;
+    padding: 50px 1em;
+}
+
+.footer .container p {
+    font-family: 'Bebas Neue', cursive;
+    color: #e4dad1;
+    font-size: 1.5rem;
+}
+
+.footer .container p a {
+    font-family: 'Bebas Neue', cursive;
+    color: #cd412b;
+    text-decoration: underline;
+}
+
+
+/*# sourceMappingURL=admin.css.map */
