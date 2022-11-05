@@ -9,7 +9,7 @@
 
 ## About Project
 
-This project was build in Laravel, Livewire and alpineJS for a Rust game community bases in France.
+This project was build in Laravel, Livewire and alpineJS for a Rust game community based in France.
 
 ## Project Components
 This project has 
